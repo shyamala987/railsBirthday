@@ -3,10 +3,7 @@
 <ul>
   <% @birthdays.each do |birthday| %>
     <li>
-    <a href="/birthdays/<%= birthday.id %>">
-        <%= birthday.name  %>
-    </a>
-    was born on <%= birthday.birthday %>
+    <a href="<%= birthday_path(birthday)%>"><%= birthday.name  %></a> was born on <%= birthday.birthday %>
     </li>
   <% end %>
 </ul>
