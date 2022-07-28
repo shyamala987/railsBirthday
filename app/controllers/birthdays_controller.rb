@@ -1,18 +1,18 @@
 class BirthdaysController < ApplicationController
   def index
-    @birthdays = Dob.all
+    @birthdays = Birthday.all
   end
 
   def show
-    @birthday = Dob.find(params[:id])
+    @birthday = Birthday.find(params[:id])
   end
 
   def new
-    @birthday = Dob.new
+    @birthday = Birthday.new
   end
 
   def create
-    @birthday = Dob.new(name: "...", birthday: "...")
+    @birthday = Birthday.new(name: "...", birthday: "...")
 
     if @birthday.save
       redirect_to @birthday

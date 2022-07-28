@@ -1,6 +1,6 @@
 require "test_helper"
 
-class DobTest < ActiveSupport::TestCase
+class BirthdayTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
