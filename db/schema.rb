@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_24_045402) do
-  create_table "dobs", force: :cascade do |t|
+ActiveRecord::Schema[7.0].define(version: 2022_07_28_010410) do
+  create_table "birthdays", force: :cascade do |t|
     t.string "name"
-    t.string "birthday"
+    t.text "dob"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
