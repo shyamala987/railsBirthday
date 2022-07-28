@@ -1,2 +1,0 @@
-class Dob < ApplicationRecord
-end
