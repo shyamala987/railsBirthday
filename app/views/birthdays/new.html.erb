@@ -1,6 +1,6 @@
 <h1>New Birthday</h1>
 
-<%= form_with model: @birthdays do |form| %>
+<%= form_with model: @birthday, url: birthdays_path do |form| %>
   <div>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
@@ -10,9 +10,9 @@
   </div>
 
   <div>
-    <%= form.label :birthday %><br>
-    <%= form.text_area :birthday %>
-    <% @birthday.errors.full_messages_for(:birthday).each do |message| %>
+    <%= form.label :dob %><br>
+    <%= form.text_area :dob %>
+    <% @birthday.errors.full_messages_for(:dob).each do |message| %>
         <div><%= message %></div>
     <% end %>
   </div>

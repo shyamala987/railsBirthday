@@ -12,7 +12,7 @@ class BirthdaysController < ApplicationController
   end
 
   def create
-    @birthday = Birthday.new(name: "...", birthday: "...")
+    @birthday = Birthday.new(birthday_params)
 
     if @birthday.save
       redirect_to @birthday
@@ -23,6 +23,6 @@ class BirthdaysController < ApplicationController
 
   private
     def birthday_params
-      params.require(:birthday).permit(:name, :birthday)
+      params.require(:birthday).permit(:name, :dob)
     end
 end
