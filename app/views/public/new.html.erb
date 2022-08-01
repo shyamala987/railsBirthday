@@ -1,0 +1,14 @@
+<h1>Rails birthday calendar</h1>
+<p>Welcome to your own birthday calendar app! Sign up or login to view birthdays of your friends and family.</p>
+
+<div id="user_nav">
+      <% if current_user %>
+        Logged in as <%= current_user.email %>.
+        <%= link_to "Log out", logout_path %>
+      <% else %>
+        <%= link_to "Sign up", sign_up_path %> or
+        <%= link_to "log in", login_path %>
+      <% end %>
+</div>
+
+<p><%= link_to "View my birthday calendar", birthdays_path %></p>

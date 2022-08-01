@@ -1,3 +1,20 @@
 <h1><%= @birthday.name %></h1>
 
 <p><%= @birthday.dob %></p>
+
+<p>
+<%= link_to "Edit this birthday entry", edit_birthday_path(@birthday) %>
+</p>
+<p>
+<%= link_to "Delete entry", birthday_path(@birthday),
+    data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+    } %>
+</p>
+
+<p>
+<%= link_to "List all birthdays", birthdays_path %>
+</p>
+
+<p><%= link_to "Log out", logout_path %></p>

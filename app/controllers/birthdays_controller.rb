@@ -1,4 +1,6 @@
 class BirthdaysController < ApplicationController
+  before_action :require_user_authentication
+
   def index
     @birthdays = Birthday.all
   end
@@ -19,6 +21,27 @@ class BirthdaysController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def edit
+    @birthday = Birthday.find(params[:id])
+  end
+
+  def update
+    @birthday = Birthday.find(params[:id])
+
+    if @birthday.update(birthday_params)
+      redirect_to @birthday
+    else
+      render 'edit', status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @birthday = Birthday.find(params[:id])
+    @birthday.destroy
+
+    redirect_to birthdays_path, status: :see_other
   end
 
   private
