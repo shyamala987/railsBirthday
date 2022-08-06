@@ -1,0 +1,91 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - '2022-07-28 01:04:25.812327'
+    - '2022-07-28 01:04:25.812327'
+
+---
+birthdays:
+  columns:
+  - id
+  - name
+  - dob
+  - created_at
+  - updated_at
+  records: 
+  - - 3
+    - charles darwin
+    - 02/12/1809
+    - '2022-08-04 01:40:09.792156'
+    - '2022-08-04 01:40:09.792156'
+  - - 5
+    - Ada Lovelace
+    - 10/02/1815
+    - '2022-08-04 01:53:52.201036'
+    - '2022-08-04 01:54:06.512548'
+  - - 9
+    - random
+    - 01/01/1235
+    - '2022-08-04 16:37:59.510765'
+    - '2022-08-04 16:38:06.053179'
+
+---
+users:
+  columns:
+  - id
+  - email
+  - password_hash
+  - password_salt
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - shyamala.ramani@gmail.com
+    - 
+    - 
+    - '2022-07-30 21:31:42.461504'
+    - '2022-07-30 21:31:42.461504'
+  - - 2
+    - shy.raj@rails.com
+    - 
+    - 
+    - '2022-07-31 00:07:01.460361'
+    - '2022-07-31 00:07:01.460361'
+  - - 3
+    - shyamala.raj@rails.com
+    - 
+    - 
+    - '2022-08-01 21:18:01.194872'
+    - '2022-08-01 21:18:01.194872'
+  - - 4
+    - shyamala.nirmal@rails.com
+    - "$2a$12$360cKCl.Ee8GS7fIv084FujTpPKbLh71Jgmlkdjqnezbap3b2.jem"
+    - "$2a$12$360cKCl.Ee8GS7fIv084Fu"
+    - '2022-08-01 21:36:15.804942'
+    - '2022-08-01 21:36:15.804942'
+  - - 5
+    - s.ramani@rails.com
+    - "$2a$12$9cbo6c20/DrzcMOi7LRpvu9deJX9YG2Y83nWSioBV3YQyDeCz3FKm"
+    - "$2a$12$9cbo6c20/DrzcMOi7LRpvu"
+    - '2022-08-04 01:24:46.626274'
+    - '2022-08-04 01:24:46.626274'
+  - - 6
+    - yashish.d@rails.com
+    - "$2a$12$3RtOaPvoqjWZMtqE6k3gL.3ck/YEuTEQP5M61sV4HsBYbdk8deHVa"
+    - "$2a$12$3RtOaPvoqjWZMtqE6k3gL."
+    - '2022-08-04 17:34:36.337667'
+    - '2022-08-04 17:34:36.337667'
+  - - 7
+    - s.rails@rails.com
+    - "$2a$12$lwtHWhvdB6ttJJLhWr21Jee8E2ptyYaz1skoiRIJTngaRn8Y.sPoe"
+    - "$2a$12$lwtHWhvdB6ttJJLhWr21Je"
+    - '2022-08-06 21:08:34.195084'
+    - '2022-08-06 21:08:34.195084'
