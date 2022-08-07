@@ -5,4 +5,4 @@ development:
   database: rails_birthday_development
   pool: 5
   username: root
-  password: Mysqlpwd!23
+  password: <REDACTED>
