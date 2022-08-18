@@ -13,7 +13,10 @@ gem "bcrypt"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+# gem "sqlite3", "~> 1.4"
+
+# Use mysql as the db for Active Record
+gem "mysql2", "~> 0.5.3"
 
 # Use yaml-db to dump database content into yaml
 gem 'yaml_db'

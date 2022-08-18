@@ -2,7 +2,7 @@ require 'bcrypt'
 class User < ApplicationRecord
 
     include BCrypt
-    validates :password, presence: true, confirmation: true
+    validates :password, presence: true, confirmation: true, length: { in: 6..15 }
     validates :email, presence: true, uniqueness: true
 
     attr_accessor :password
