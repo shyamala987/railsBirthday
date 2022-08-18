@@ -1,4 +1,6 @@
-class ApplicationController < ActionController::Base
+class ApplicationController < ActionController::API
+    include ActionController::Cookies
+
     helper_method :current_user
 
     private
@@ -7,6 +9,6 @@ class ApplicationController < ActionController::Base
     end 
 
     def require_user_authentication
-        redirect_to "/login" unless current_user.present?
+        render json: {message: "You need to login first! Please hit up /login"} unless current_user.present?
       end
 end

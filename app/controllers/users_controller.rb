@@ -1,15 +1,25 @@
 class UsersController < ApplicationController
+  def index
+    @users = User.all
+    render json: @users
+  end
+
   def new
     @user = User.new
+  end
+
+  def show
+    @user = User.find(params[:id])
+    render json: @user
   end
 
   def create
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to root_url,  :flash => { notice: "Sign up successful!" }
+      render json: { message: "Sign up successful!" }, status: 200
     else
-      render :new, status: :unprocessable_entity
+      render json: {message: "User sign up failed!"}, status: 400
     end
   end
 

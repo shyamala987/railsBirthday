@@ -6,17 +6,14 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:email], params[:password])
     if user
       session[:user_id] = user.id
-      flash[:notice] = "Logged in!"
-      redirect_to root_url
+      render json: { message: "Logged in!" }, status: 200
     else
-      flash[:notice] = "Login attempt failed. Try again."
-      render 'new', status: :unprocessable_entity
+      render json: { error: "Login attempt failed. Try again." }, status: 400
     end
   end
 
   def destroy
     session[:user_id] = nil
-    flash[:notice] = "Logged out successfully."
-    redirect_to root_url
+    render json: { message: "Logged out successfully." }, status: 200
   end
 end
