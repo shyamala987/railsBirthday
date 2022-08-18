@@ -3,10 +3,12 @@ class BirthdaysController < ApplicationController
 
   def index
     @birthdays = Birthday.all
+    render json: @birthdays
   end
 
   def show
     @birthday = Birthday.find(params[:id])
+    render json: @birthday
   end
 
   def new
@@ -17,9 +19,9 @@ class BirthdaysController < ApplicationController
     @birthday = Birthday.new(birthday_params)
 
     if @birthday.save
-      redirect_to @birthday
+      render json: @birthday, status: 200
     else
-      render :new, status: :unprocessable_entity
+      render json: { error: "Unable to create birthday" }, status: 400
     end
   end
 
@@ -31,17 +33,20 @@ class BirthdaysController < ApplicationController
     @birthday = Birthday.find(params[:id])
 
     if @birthday.update(birthday_params)
-      redirect_to @birthday
+      render json: @birthday, status: 200
     else
-      render 'edit', status: :unprocessable_entity
+      render json: { error: "Unable to update birthday"}, status: 400
     end
   end
 
   def destroy
     @birthday = Birthday.find(params[:id])
-    @birthday.destroy
-
-    redirect_to birthdays_path, status: :see_other
+    if @birthday
+      @birthday.destroy
+      render json: { message: "Birthday entry successfully removed!"}, status: 200
+    else
+      render json: { error: "Unable to delete entry :("}, status: 400
+    end
   end
 
   private
