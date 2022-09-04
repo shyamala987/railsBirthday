@@ -9,7 +9,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     volumes:
-      - db_data2:/var/lib/mysqldata
+      - mysql_db_data:/var/lib/mysqldata:rw
 
   app:
     build: .
@@ -24,4 +24,4 @@ services:
       RAILS_ENV: development
 
 volumes:
-  db_data2:
+  mysql_db_data:
